@@ -16,12 +16,14 @@ namespace LINQ
         new Employee("Valera", 5)};
 
         static int[] array = { 5, 8, 32, 42, 56, 53 };
+        static string[] lastNames = { "Акулов", "Завалецкий", "Осипов", "Барабанов", "Фильдух" };
 
         static Random rand = new Random();
 
         static void Main(string[] args)
         {
             Zadanie1(employees, rand);
+            Zadanie2(lastNames);
             Zadanie3();
         }
         static public void Zadanie1(List<Employee> employees, Random rand)
@@ -38,6 +40,10 @@ namespace LINQ
                          select Card;
             foreach (var card in zapros)
                 Console.WriteLine($"ID:{card.ID} Name:{card.name}\n");
+        }
+        static public void Zadanie2(string[] array)
+        {
+            NumberTwo zadanie = new NumberTwo(array);
         }
         static public void Zadanie3()
         {
